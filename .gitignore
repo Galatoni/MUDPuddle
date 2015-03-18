@@ -1,6 +1,8 @@
 # Composer files
 composer.phar
 vendor/
+.vagrant/
+.idea/
 
 # Local configs
 config/autoload/*.local.php
