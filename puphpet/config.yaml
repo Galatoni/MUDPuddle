@@ -89,23 +89,28 @@ apache:
     vhosts:
         iw9vsefn3qgg:
             servername: mudpuddle.dev
-            docroot: /var/www/MUDPuddle
+            docroot: /var/www/MUDPuddle/public
             port: '80'
             setenv:
                 - 'APP_ENV dev'
             directories:
                 p2kdrae76tsp:
                     provider: directory
-                    path: /var/www/MUDPuddle
+                    path: /var/www/MUDPuddle/public
                     options:
                         - Indexes
                         - FollowSymlinks
                         - MultiViews
+                    order:
+                        - allow
+                        - deny
                     allow_override:
                         - All
                     require:
                         - all
                         - granted
+                    directory_index:
+                        - index.php
                     custom_fragment: ''
             engine: php
             custom_fragment: ''
