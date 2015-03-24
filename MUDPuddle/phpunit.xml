@@ -1,0 +1,7 @@
+<phpunit>
+<testsuites>
+    <testsuite name="MUDPuddle">
+        <directory>./tests/module/Application</directory>
+    </testsuite>
+</testsuites>
+</phpunit>
